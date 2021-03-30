@@ -23,6 +23,9 @@ header{
   flex-direction: column;
   align-items: center;
   z-index: 1;
+
+  transition: 0.5s ease-out 0.25s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(30vh - 4px), 0 calc(30vh - 4px));
 }
 #title{
   top: 20%;
@@ -92,6 +95,10 @@ nav a:hover{
 #btn:hover ~ nav, nav:hover{
   transform: translateY(calc(100% + 5px));
   transition: 0.5s ease-out 0s;
+}
+#btn:hover ~ header, nav:hover ~ header{
+  transition: 0.5s ease-out 0s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(40vh - 4px), 0 calc(40vh - 4px));
 }
 nav:hover ~ main, #btn:hover ~ main{
   transform: translateY(100px);
